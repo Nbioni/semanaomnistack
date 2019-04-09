@@ -35,4 +35,4 @@ app.use('/files', express.static(path.resolve(__dirname, '..', 'temp')));
 app.use(require('./routes'));//Cadastra as rotas
 
 //Escuta a porta 3333 - testar em localhost:3333
-server.listen(3333); //Recebe requisições tanto http quanto socket
+server.listen(process.env.PORT || 3333); //Recebe requisições tanto http quanto socket
